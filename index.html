@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for ChatGPT · Table of Contents, a browser extension for navigating your ChatGPT prompts.">
+  <meta name="color-scheme" content="light">
+  <title>Privacy Policy · ChatGPT Table of Contents</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202020; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 16px; line-height: 1.75; }
+    .wrap { width: min(100% - 48px, 780px); margin-inline: auto; }
+    header { border-bottom: 1px solid #e9e9e9; padding-block: 26px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; line-height: 1.4; }
+    .mark { width: 32px; height: 32px; padding: 7px; border: 1px solid #dedede; border-radius: 8px; flex-shrink: 0; }
+    main { padding-block: 64px 56px; }
+    .eyebrow { margin: 0 0 12px; color: #707070; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+    h1 { margin: 0; font-size: clamp(34px, 6vw, 46px); line-height: 1.15; font-weight: 650; letter-spacing: -.035em; }
+    .updated { margin: 16px 0 30px; color: #707070; font-size: 13px; }
+    .intro { font-size: 18px; line-height: 1.65; margin: 0; max-width: 670px; }
+    .summary { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 44px; padding: 0; list-style: none; }
+    .summary li { border: 1px solid #e6e6e6; border-radius: 6px; padding: 5px 10px; font-size: 12px; color: #505050; }
+    section { padding-block: 26px; border-top: 1px solid #ededed; scroll-margin-top: 20px; }
+    h2 { font-size: 19px; line-height: 1.4; font-weight: 600; letter-spacing: -.015em; margin: 0 0 12px; }
+    p { margin: 0 0 14px; }
+    section p:last-child { margin-bottom: 0; }
+    ul { padding-left: 22px; margin: 12px 0 16px; }
+    li { margin: 4px 0; }
+    a { color: inherit; text-decoration-color: #999; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    a:hover { text-decoration-color: #111; }
+    a:focus-visible { outline: 2px solid #222; outline-offset: 4px; border-radius: 2px; }
+    code { font: .9em ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+    footer { border-top: 1px solid #e9e9e9; padding-block: 24px 32px; color: #707070; font-size: 12px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    @media (max-width: 520px) { .wrap { width: calc(100% - 36px); } main { padding-block: 40px 32px; } .intro { font-size: 16px; } section { padding-block: 22px; } }
+    @media print { main { padding-block: 24px; } .wrap { width: 100%; } body { font-size: 11pt; } h2 { break-after: avoid; } footer a { display: none; } }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <div class="wrap brand">
+      <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      <span>ChatGPT · Table of Contents</span>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="eyebrow">Your conversations. Your browser.</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <time datetime="2026-10-21">October 21, 2026</time></p>
+    <p class="intro">This extension helps you find your way through ChatGPT conversations. This policy explains what it accesses, why it needs that information, and where it stays.</p>
+    <ul class="summary" aria-label="Privacy highlights">
+      <li>No advertising</li><li>No analytics in the extension</li><li>No developer data server</li>
+    </ul>
+
+    <section aria-labelledby="access">
+      <h2 id="access">1. Information the extension accesses</h2>
+      <p>The extension operates only on <code>chatgpt.com</code> and <code>chat.openai.com</code>. It accesses the current conversation’s:</p>
+      <ul><li>User prompts and message creation timestamps.</li><li>Message and conversation identifiers.</li><li>Page content and scroll position needed to locate prompts and display the directory.</li></ul>
+      <p>To include prompts that are not currently rendered on the page, it retrieves conversation history from the same ChatGPT website using your existing signed-in session. History responses may include assistant replies, attachment metadata, and other conversation content. Only user prompts, including attachment labels when needed, appear in the directory.</p>
+    </section>
+    <section aria-labelledby="use">
+      <h2 id="use">2. How information is used</h2>
+      <p>This information is used to build the numbered table of contents, show full-text previews and original sent times, highlight your reading position, and navigate to selected prompts. Scroll activity also controls when the directory handle appears.</p>
+      <p>Authentication headers associated with the page’s conversation requests are used temporarily in memory only to retrieve the current conversation’s history from the same ChatGPT origin. They are not saved to persistent storage, logged, or sent to the developer or third parties.</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">3. Storage and retention</h2>
+      <p>The extension keeps its prompt directory in browser-tab memory. It does not persist conversation content in local storage. Closing the tab ends this in-memory processing.</p>
+      <p>Only the draggable handle’s position is saved in the ChatGPT website’s local storage, under <code>chatgpt-toc-handle-position-v1</code>. This preference stays until that storage entry or the site’s local storage is cleared. Uninstalling the extension does not necessarily remove this site-storage entry.</p>
+    </section>
+    <section aria-labelledby="sharing">
+      <h2 id="sharing">4. Sharing and third-party services</h2>
+      <p>The extension does not send conversation content or authentication information to the developer or any third-party service. It does not sell user data, include advertising or analytics, or track browsing on other websites.</p>
+      <p>History requests are sent to the ChatGPT origin you are already using. OpenAI’s handling of those requests and your ChatGPT data is covered by <a href="https://openai.com/policies/privacy-policy/">OpenAI’s Privacy Policy</a>.</p>
+    </section>
+    <section aria-labelledby="choices">
+      <h2 id="choices">5. Your choices</h2>
+      <p>You can stop the extension’s access by disabling or uninstalling it and refreshing or closing existing ChatGPT tabs. You can remove the saved handle position by deleting its local-storage entry or clearing the ChatGPT website’s local storage.</p>
+      <p>These actions do not delete conversations stored by ChatGPT. Manage those conversations through ChatGPT’s own controls.</p>
+    </section>
+    <section aria-labelledby="website">
+      <h2 id="website">6. This policy website</h2>
+      <p>This page contains no analytics scripts, tracking pixels, forms, or embedded third-party assets. When hosted on GitHub Pages, GitHub handles website requests and may process technical information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. Visiting this policy page does not give it access to your ChatGPT conversations.</p>
+    </section>
+    <section aria-labelledby="changes">
+      <h2 id="changes">7. Changes to this policy</h2>
+      <p>This policy may be updated when the extension’s functionality or data practices change. The revised policy will be published here with an updated date.</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">8. Contact</h2>
+      <p>For privacy questions, contact the developer at <a href="mailto:taybob53@gmail.com">taybob53@gmail.com</a>.</p>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>ChatGPT · Table of Contents · Independent browser extension</span><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
